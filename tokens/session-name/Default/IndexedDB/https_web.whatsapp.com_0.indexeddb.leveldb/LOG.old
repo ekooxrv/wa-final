@@ -1,0 +1,6 @@
+2023/10/31-15:58:58.430 1a28 Reusing MANIFEST C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/31-15:58:58.430 1a28 Recovering log #655
+2023/10/31-15:58:58.494 1a28 Reusing old log C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000655.log 
+2023/10/31-16:01:46.657 12bc Level-0 table #661: started
+2023/10/31-16:01:46.706 12bc Level-0 table #661: 1310813 bytes OK
+2023/10/31-16:01:46.709 12bc Delete type=0 #655
