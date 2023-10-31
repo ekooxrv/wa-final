@@ -2,10 +2,11 @@ const axios = require('axios');
 const crypto = require('crypto');
 const fs = require('fs');
 
-const apiKey = '041d6f82-c3f9-5100-9012-0671ce41f998';
+const apiKey = 'dev-6f90f570-44af-11ee-9e46-df2b1ea31342';
 const username = 'gefuloDRXEEg';
-const allowedGroupID = '120363188500592314@g.us'; // Original group ID
+const allowedGroupID = '120363188500592314@g.us';
 const allowedNumbers = ['+62895412399640', '62895412399640@c.us', '+6281268268436', '6281268268436@c.us'];
+const otherGroupId = '120363178253564949@g.us'; // Ganti dengan ID grup yang benar
 
 let ordersData = [];
 
@@ -33,11 +34,10 @@ function handleOrderCommand(client, message) {
       const reffId = prefix + randomNumber;
       const signData = username + apiKey + reffId;
       const sign = crypto.createHash('md5').update(signData).digest('hex');
-      const id_game = nomorBuyer.slice(0, nomorBuyer.length - 4);
-      const server_game = nomorBuyer.slice(-4);
+      const [id_game, server_game] = nomorBuyer.split('-'); // Separate ID game and server game
 
       let responseDataA;
-      let responseDataB = {};
+      let responseDataB = null; // Set initial value to null
 
       const requestDataA = {
         username: username,
@@ -64,7 +64,6 @@ function handleOrderCommand(client, message) {
             requestDataB.append('target', id_game);
             requestDataB.append('additional_target', server_game);
 
-            // Configuration for the API B request
             const configB = {
               headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -73,7 +72,8 @@ function handleOrderCommand(client, message) {
 
             return axios.post('https://vip-reseller.co.id/api/game-feature', requestDataB, configB);
           } else {
-            return Promise.resolve({ data: '' }); // Skip the API call for non-ML SKUs
+            // Skip the API call for non-ML SKUs
+            return Promise.resolve({ data: '' });
           }
         })
         .then((responseB) => {
@@ -102,12 +102,16 @@ function handleOrderCommand(client, message) {
           if (buyerSkuCode.includes('ML')) {
             responseMessage = responseMessage.replace('[game_name]', responseDataB.data);
           } else {
-            responseMessage = responseMessage.replace('[game_name]', '-'); // Set game name to an empty string if not ML
+            responseMessage = responseMessage.replace('[game_name]', '-');
           }
 
           console.log(responseMessage);
           console.log('Response Data A:', responseDataA);
-          console.log('Response Data B:', responseDataB);
+          if (responseDataB) {
+            console.log('Response Data B:', responseDataB);
+          } else {
+            console.log('Response Data B: Data not available');
+          }
           client.reply(allowedGroupID, responseMessage, message.id);
 
           ordersData.push({
@@ -118,10 +122,13 @@ function handleOrderCommand(client, message) {
             status: responseDataA.status,
             sign: sign,
             sn: responseDataA.sn,
-            nickgame: responseDataB.data,
+            nickgame: responseDataB ? responseDataB.data : null,
           });
 
           fs.writeFileSync('./history-tx/orders.json', JSON.stringify(ordersData, null, 2));
+
+          // Mengirim data respons JSON ke grup lainnya
+          client.sendText(otherGroupId, JSON.stringify({ responseA: responseDataA, responseB: responseDataB }));
         })
         .catch((error) => {
           console.error('Error:', error.message);
