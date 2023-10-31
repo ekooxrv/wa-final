@@ -1,0 +1,66 @@
+[
+  {
+    "ref_id": "MS415980",
+    "customer_no": "08172727272",
+    "buyer_sku_code": "TSEL1RP",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "33123ca21c2c8a2b5fc5710365ffd27f",
+    "sn": "",
+    "nickgame": {
+      "key": "FXfgGWzuTpCCcTYVI8OOz2h05BMefq23qIOtF6NGNco3mO4kAZ9gYS7ITH0ceFcv",
+      "sign": "0ef4686aecafb573d4b8ddad2bf5f724",
+      "type": "get-nickname",
+      "code": "mobile-legends",
+      "target": "0817272",
+      "additional_target": "7272"
+    }
+  },
+  {
+    "ref_id": "MS364940",
+    "customer_no": "08172727272",
+    "buyer_sku_code": "TSEL1RP",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "a455b726486d3a713af5c9d15fd2bf5c",
+    "sn": ""
+  },
+  {
+    "ref_id": "MS503202",
+    "customer_no": "799646092151",
+    "buyer_sku_code": "ML3",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "827c412c5b9003c5da3fe3e3a414e568",
+    "sn": "",
+    "nickgame": "Cincame."
+  },
+  {
+    "ref_id": "MS439975",
+    "customer_no": "08172727272",
+    "buyer_sku_code": "TSEL1RP",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "702e0ef6cfb6de4b65ec14e8215844d2",
+    "sn": ""
+  },
+  {
+    "ref_id": "MS990501",
+    "customer_no": "08172727272",
+    "buyer_sku_code": "TSEL1RP",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "4dc29bf87fa45feebcb2f66c9b7b55d4",
+    "sn": ""
+  },
+  {
+    "ref_id": "MS848843",
+    "customer_no": "799646092151",
+    "buyer_sku_code": "ML3",
+    "additional_params": "",
+    "status": "Pending",
+    "sign": "924da2c79fe3cc2352e2813978dc732d",
+    "sn": "",
+    "nickgame": "Cincame."
+  }
+]
