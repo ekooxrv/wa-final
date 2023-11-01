@@ -6,7 +6,6 @@ const orderModule = require('./modules/order.js');
 const itemModule = require('./modules/item.js');
 const dataManipulation = require('./modules/dataManipulation.js');
 const groupInfo = require('./modules/groupInfo.js'); // Require the new module
-
 const allowedGroupID = '120363188500592314@g.us'; // Original group ID
 const newGroupID = '120363178253564949@g.us'; // New group ID
 
