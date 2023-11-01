@@ -2,7 +2,8 @@ const axios = require('axios');
 const crypto = require('crypto');
 const fs = require('fs');
 
-const apiKey = 'dev-6f90f570-44af-11ee-9e46-df2b1ea31342';
+// const apiKey = 'dev-6f90f570-44af-11ee-9e46-df2b1ea31342';
+const apiKey = '041d6f82-c3f9-5100-9012-0671ce41f998';
 const username = 'gefuloDRXEEg';
 const allowedGroupID = '120363188500592314@g.us';
 const allowedNumbers = ['+62895412399640', '62895412399640@c.us', '+6281268268436', '6281268268436@c.us'];
