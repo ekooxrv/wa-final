@@ -1,0 +1,19 @@
+{
+  "name": "heroku-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "crypto": "^1.0.1",
+    "puppeteer": "^21.4.1",
+    "venom-bot": "^5.0.21"
+  }
+}

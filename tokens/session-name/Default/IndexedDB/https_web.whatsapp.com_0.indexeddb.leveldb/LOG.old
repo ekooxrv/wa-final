@@ -1,14 +1,3 @@
-2023/11/01-10:30:26.182 ccc Reusing MANIFEST C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/11/01-10:30:26.183 ccc Recovering log #671
-2023/11/01-10:30:26.265 ccc Reusing old log C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000671.log 
-2023/11/01-10:31:26.929 548 Level-0 table #678: started
-2023/11/01-10:31:26.998 548 Level-0 table #678: 1274932 bytes OK
-2023/11/01-10:31:27.001 548 Delete type=0 #671
-2023/11/01-10:31:30.502 548 Compacting 1@1 + 2@2 files
-2023/11/01-10:31:30.655 548 Generated table #679@1: 57290 keys, 2248350 bytes
-2023/11/01-10:31:30.735 548 Generated table #680@1: 38432 keys, 1287337 bytes
-2023/11/01-10:31:30.736 548 Compacted 1@1 + 2@2 files => 3535687 bytes
-2023/11/01-10:31:30.737 548 compacted to: files[ 0 0 4 0 0 0 0 ]
-2023/11/01-10:31:30.737 548 Delete type=2 #674
-2023/11/01-10:31:30.738 548 Delete type=2 #675
-2023/11/01-10:31:30.738 548 Delete type=2 #678
+2023/11/01-10:33:48.910 ca8 Reusing MANIFEST C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/11/01-10:33:48.911 ca8 Recovering log #677
+2023/11/01-10:33:48.919 ca8 Reusing old log C:\Users\Luke\Documents\wa_final\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000677.log 
